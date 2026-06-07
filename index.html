@@ -143,3 +143,59 @@ function rollDice(){
 
 </body>
 </html>
+<hr>
+
+<h2>💳 Telebirr Payment</h2>
+
+<p>Select Amount:</p>
+
+<select id="amount" style="padding:10px;">
+  <option value="50">50 Birr</option>
+  <option value="100">100 Birr</option>
+  <option value="800">800 Birr</option>
+  <option value="1000">1000 Birr</option>
+  <option value="10000">10000 Birr</option>
+</select>
+
+<p>
+Send the selected amount to:
+</p>
+
+<h3>0966921403</h3>
+
+<input
+  type="text"
+  id="txid"
+  placeholder="Enter Transaction ID"
+  style="padding:10px;width:250px;"
+>
+
+<br><br>
+
+<button onclick="submitPayment()">
+✅ Submit Payment
+</button>
+
+<p id="result"></p>
+
+<script>
+function submitPayment(){
+
+    let amount =
+    document.getElementById("amount").value;
+
+    let txid =
+    document.getElementById("txid").value;
+
+    if(txid==""){
+        alert("Enter Transaction ID");
+        return;
+    }
+
+    document.getElementById("result").innerHTML =
+    "Payment submitted: " +
+    amount +
+    " Birr | TX ID: " +
+    txid;
+}
+</script>
