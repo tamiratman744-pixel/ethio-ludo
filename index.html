@@ -1,30 +1,143 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Ethio Ludo</title>
+
 <style>
 body{
+    background:#111;
+    color:white;
     text-align:center;
     font-family:Arial;
 }
+
+h1{
+    color:gold;
+}
+
+.board{
+    width:320px;
+    height:320px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(8,40px);
+    grid-template-rows:repeat(8,40px);
+    gap:2px;
+}
+
+.cell{
+    background:#333;
+    border:1px solid #555;
+}
+
+.red{background:red;}
+.green{background:green;}
+.yellow{background:gold;}
+.blue{background:blue;}
+
 button{
-    padding:10px;
-    font-size:20px;
+    padding:12px 20px;
+    font-size:18px;
+    margin-top:15px;
+}
+
+#dice{
+    font-size:40px;
+    margin:15px;
 }
 </style>
 </head>
+
 <body>
 
-<h1>Ethio Ludo</h1>
+<h1>🎲 Ethio Ludo</h1>
 
-<h2 id="dice">0</h2>
+<div id="dice">0</div>
 
-<button onclick="rollDice()">🎲 Roll Dice</button>
+<button onclick="rollDice()">Roll Dice</button>
+
+<div class="board">
+
+<div class="cell red"></div>
+<div class="cell red"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell green"></div>
+<div class="cell green"></div>
+
+<div class="cell red"></div>
+<div class="cell red"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell green"></div>
+<div class="cell green"></div>
+
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell yellow"></div>
+<div class="cell yellow"></div>
+<div class="cell yellow"></div>
+<div class="cell yellow"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell yellow"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell yellow"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell yellow"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell yellow"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell yellow"></div>
+<div class="cell yellow"></div>
+<div class="cell yellow"></div>
+<div class="cell yellow"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+
+<div class="cell blue"></div>
+<div class="cell blue"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell green"></div>
+<div class="cell green"></div>
+
+<div class="cell blue"></div>
+<div class="cell blue"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell green"></div>
+<div class="cell green"></div>
+
+</div>
 
 <script>
 function rollDice(){
-    let n = Math.floor(Math.random()*6)+1;
-    document.getElementById("dice").innerHTML = n;
+ let n=Math.floor(Math.random()*6)+1;
+ document.getElementById("dice").innerHTML=n;
 }
 </script>
 
