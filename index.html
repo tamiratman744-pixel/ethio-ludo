@@ -141,8 +141,8 @@ function rollDice(){
 }
 </script>
 
-</body>
-</html>
+
+
 <hr>
 
 <h2>💳 Telebirr Payment</h2>
@@ -192,10 +192,15 @@ function submitPayment(){
         return;
     }
 
-    document.getElementById("result").innerHTML =
-    "Payment submitted: " +
-    amount +
-    " Birr | TX ID: " +
-    txid;
+    alert(
+        "Payment Submitted!\n\n" +
+        "Amount: " + amount + " Birr\n" +
+        "TX ID: " + txid
+    );
+
+    window.location.href =
+    "https://t.me/ethio_ludo2025_bot";
 }
 </script>
+</body>
+</html>
